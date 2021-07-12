@@ -1,33 +1,12 @@
-/*
-    <--------Sudoku Solver-------->
-
-    Common approach is Naive algorithm but as it finds all combinations and picks one solution it is
-    totally time wasting so better we should use Backtracking algorithm which terminates according to
-    bounding function and will not find all combinations.
-
-    Algorithm for solving sudoku is Backtracking algorithm.
-    -> It is a recursive approach uses dfs(depth first search) to solve the problem.
-    -> It goes putting on values from 1 to 9 with sudoku constraints in each cell and if next none
-    value is not satisfying contraints then it backtracks i.e it comes to previous call and again put
-    next possible value.This process is recursive.
-    -> And where we got all cells filled we come up with sudoku solution and we will stop recursion.
-
-
-    1st version --> Displays grid of sudoku with indices and user can put values in grid in empty places only and check for score
-    2nd version --> Computer solves the sudoku given using backtracking algorithm and bounding function
-
-    <---Created by Vedant Valsangkar--->
-*/
-
 #include <iostream>
 #include <string.h>
-#include<graphics.h>
+#include <graphics.h>
 #include <windows.h>
 using namespace std;
 
 #define N 9
 
-//Hard code sudoku
+// Hard code sudoku
 int arr[N][N] = {{3, 0, 6, 5, 0, 8, 4, 0, 0},
     {5, 2, 0, 0, 0, 0, 0, 0, 0},
     {0, 8, 7, 0, 0, 0, 0, 3, 1},
@@ -307,3 +286,23 @@ int main()
     closegraph();
     return 0;
 }
+/*
+    <--------Sudoku Solver-------->
+
+    Common approach is Naive algorithm but as it finds all combinations and picks one solution it is
+    totally time wasting so better we should use Backtracking algorithm which terminates according to
+    bounding function and will not find all combinations.
+
+    Algorithm for solving sudoku is Backtracking algorithm.
+    -> It is a recursive approach uses dfs(depth first search) to solve the problem.
+    -> It goes putting on values from 1 to 9 with sudoku constraints in each cell and if next none
+    value is not satisfying contraints then it backtracks i.e it comes to previous call and again put
+    next possible value.This process is recursive.
+    -> And where we got all cells filled we come up with sudoku solution and we will stop recursion.
+
+
+    1st version --> Displays grid of sudoku with indices and user can put values in grid in empty places only and check for score
+    2nd version --> Computer solves the sudoku given using backtracking algorithm and bounding function
+
+    <---Created by Vedant Valsangkar--->
+*/
